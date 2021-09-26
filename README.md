@@ -1,7 +1,13 @@
 # Google Photos Filter
-The filter scans your Google Photos account to tell you which photos are not part of an album.
+This allows you to filter your Google Photos for various criteria
 
-## Usage
-1. Clone the repo
-1. Run `python3 main.py --guide` and follow the instructions to generate Google credentials
-1. Run `python3 main.py` to run the scan
+## How to use
+```
+docker run --rm -it -v /path/to/google-photos-filter/secrets:/app/secrets -v /path/to/google-photos-filter/results:/app/results --name google-photos-filter paranerd/google-photos-filter --filter <filter-name>
+```
+
+## Supported filters
+### No album
+Filter name: `no-album`
+
+What it does: Filters for all photos that are not part of an album
